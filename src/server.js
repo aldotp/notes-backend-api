@@ -2,7 +2,7 @@ const express = require('express');
 const router = require('./route.js');
 const cors = require('cors');
 
-const host = 'localhost';
+const host = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0';
 const port = 5000;
 const app = express();
 
